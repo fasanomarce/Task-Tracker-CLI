@@ -70,6 +70,7 @@ def main():
         help="Nuevo título de la tarea"
     )
 
+    # subcomando 'delete'
     parserDelete = subparsers.add_parser('delete', help="Eliminar una tarea en específico")
     parserDelete.add_argument(
         "id",
@@ -115,7 +116,6 @@ def addTask(titulo, status):
     }
 
     tareas.append(nuevaTarea)
-
 
     saveTask(tareas)
 
